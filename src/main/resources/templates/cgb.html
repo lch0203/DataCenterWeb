@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>村干部学历提升</title>
+
+    <!-- Icons -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Main styles for this application -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+
+
+<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
+    <header class="app-header navbar">
+        <button class="navbar-toggler mobile-sidebar-toggler hidden-lg-up" type="button">☰</button>
+        <a class="navbar-brand" href="#"></a>
+        <ul class="nav navbar-nav hidden-md-down">
+            <li class="nav-item">
+                <a class="nav-link navbar-toggler sidebar-toggler" href="#">☰</a>
+            </li>
+
+
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                    <span class="hidden-md-down">欢迎,<strong><span th:text="${attributes.username}"></span></strong></span>
+                </a>
+            </li>
+
+        </ul>
+    </header>
+
+    <div class="app-body">
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="icon-pie-chart"></i> 首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/bxtx"><i class="icon-pie-chart"></i> 办学体系</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/bxgm"><i class="icon-pie-chart"></i> 办学规模</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cgb"><i class="icon-pie-chart"></i> 村干部学历提升</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/gbzx"><i class="icon-pie-chart"></i> 干部在线学习</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main content -->
+        <main class="main">
+
+            <!-- Breadcrumb -->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><i class="icon-home">&#xe67f;</i> <span class="c-gray en">&gt;</span> 村干部学历提升</li>
+            
+
+                <!-- Breadcrumb Menu-->
+                <li class="breadcrumb-menu hidden-md-down">
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <a class="btn btn-secondary" href="#"><i class="icon-settings"></i> &nbsp;<!--设置--></a>
+                    </div>
+                </li>
+            </ol>
+
+
+            <div class="container-fluid">
+                <div class="animated fadeIn">
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <i class="fa fa-align-justify"></i> 村干部合作点分布
+                                </div>
+                                <!--内容填写-->
+                                <div class="card-block" id="container1" style="min-width:400px;height:600px">
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.col-->
+
+                        <div class="col-lg-6" >
+                            <div class="card">
+                                <div class="card-header">
+                                    <i class="fa fa-align-justify"></i>村干部学历提升在校生分布
+                                </div>
+                                <div class="card-block"id="container2" style="min-width:400px;height:600px">
+                            
+                                </div>                                
+                               
+                            </div>
+                        </div>
+                        <!--/.col-->
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <i class="fa fa-align-justify"></i> 村干部学历提升办学点位置图
+                                </div>
+                                <div class="card-block" style="min-width:400px;height:500px">
+                                    <iframe name="mainFrame" id="mainFrame" frameborder="0" src="http://192.168.141.8/map.html?ID=3" style="width:100%;height: 100%;border:1px solid #096DA6" scrolling="auto"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.col-->
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.conainer-fluid -->
+        </main>
+
+    </div>
+
+     <footer class="app-footer">
+        <span >
+        Copyright &copy; 2018.云南开放大学数据中心。
+        </span>
+    </footer>
+    <!-- Bootstrap and necessary plugins -->
+	<script src="assets/js/libs/jquery.min.js"></script>
+	<script src="assets/js/libs/tether.min.js"></script>
+	<script src="assets/js/libs/bootstrap.min.js"></script>
+	<script src="assets/js/libs/pace.min.js"></script>
+	<!-- Plugins and scripts required by all views -->
+	<script src="assets/js/libs/Chart.min.js"></script>
+
+
+    <!-- GenesisUI main scripts -->
+
+    <script src="js/app.js"></script>
+        <script type="text/javascript" src="./echart3/dist/echarts.js"></script>
+        <script type="text/javascript" src="./echart3/map/js/province/yunnan.js"></script>
+        <pre name = "code" class="html"></pre><script type="text/javascript">
+         var geoCoordMap = {
+                '宾川': [100.55, 25.82],
+                '沧源': [99.24, 23.15],
+                '迪庆': [99.72, 27.78],
+                '临沧': [100.08, 23.88],
+                '凤庆': [99.92, 24.58],
+                '耿马': [99.39, 23.53],
+                '临翔区': [100.08, 23.78],
+                '马龙': [103.61, 25.41],
+                '砚山': [104.35, 23.62],
+                '漾濞': [99.98, 25.68],
+                '永德': [99.25, 24.03],
+                '镇康': [99.02, 23.62],
+                '云县': [100.12, 24.44],
+                '沾益': [103.82, 25.6],
+                '双江': [99.85, 23.45],
+                '文山': [104.24, 23.37],
+                '武定': [102.36, 25.55]
+            };
+
+     var convertData = function (data) {
+                var res = [];
+                for (var i = 0; i < data.length; i++) {
+                    var geoCoord = geoCoordMap[data[i].name];
+                    if (geoCoord) {
+                        res.push({
+                            name: data[i].name,
+                            value: geoCoord.concat(data[i].value)
+                        });
+                    }
+                }
+                return res;
+            };
+            var myChart = echarts.init(document.getElementById('container1'));
+            myChart.setOption({
+                backgroundColor: '#404a59',
+                title: {
+                    text: '村干部学历提升合作点分布',
+                    subtext: '数据截止于2017年4月',
+                    left: 'center',
+                    textStyle: {
+                        color: '#fff'
+                    }
+                },
+
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function (params) {
+                        return params.name + ':' + params.value[2];
+                    }
+                },
+                legend: {
+                    orient: 'vertical',
+                    y: 'bottom',
+                    x: 'right',
+                    data: ['村干部学历提升合作点(17个点)'],
+                    textStyle: {
+                        color: '#fff'
+                    }
+                },
+                toolbox: {
+                    show: true,
+                    orient: 'vertical',
+                    left: 'right',
+                    top: 'center',
+                    feature: {
+                        restore: {},
+                        saveAsImage: {}
+                    }
+                },
+
+                geo: {
+                    map: '云南',
+                    zoom: 1.2,
+                    roam:true,
+                    label: {
+                        emphasis: {
+                            show: false
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            areaColor: '#323c48',
+                            borderColor: '#31'
+                        },
+                        emphasis: {
+                            areaColor: '#2a333d'
+                        }
+                    }
+                },
+
+                series: [{
+                    name: '村干部学历提升合作点(17个点)',
+                    type: 'effectScatter',
+                    coordinateSystem: 'geo',
+
+                    data: convertData([
+                    { name: "宾川", value: 923 },
+                    { name: "沧源", value: 206 },
+                    { name: "迪庆", value: 221 },
+                    { name: "凤庆", value: 291 },
+                    { name: "耿马", value: 277 },
+                    { name: "临翔区", value: 212 },
+                    { name: "马龙", value: 740 },
+                    { name: "砚山", value: 635 },
+                    { name: "漾濞", value: 124 },
+                    { name: "永德", value: 626 },
+                    { name: "镇康", value: 153 },
+                    { name: "云县", value: 257 },
+                    { name: "文山", value: 166 },
+                    { name: "武定", value: 155 },
+                    { name: "双江", value: 98 },
+                    { name: "沾益", value: 574 }
+              ]),
+                    symbolSize: function (val) {
+                        if (val[2] > 300) {
+                            return val[2] / 60;
+                        }
+                        else {
+                            return 5;
+                        }
+                    },
+                    showEffectOn: 'render',
+                    rippleEffect: {
+                        brushType: 'stroke'
+                    },
+                    hoverAnimation: true,
+                    label: {
+                        normal: {
+                            formatter: '{b}',
+                            position: 'left',
+                            show: true
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: '#f4e925',
+                            shadowBlur: 10,
+                            shadowColor: '#333'
+                        }
+                    },
+                    zlevel: 1
+                }]
+            });
+        </script>
+
+   <script type="text/javascript">
+       var myChart = echarts.init(document.getElementById('container2'));
+       var data2015a = [28, 0, 19, 0, 0, 0, 0, 0, 0, 0, 177, 489, 532, 0, 0, 0, 374];
+       var data2016s = [13, 0, 6, 0, 0, 0, 0, 0, 0, 0, 22, 0, 113, 0, 0, 0, 0];
+       var data2016a=[22, 206, 99, 221, 291, 277, 212, 98, 166, 150, 436, 137, 214, 257, 574, 153, 366];
+       option = {
+           title: {
+               text: ''
+           },
+           tooltip: {
+               trigger: 'axis',
+               axisPointer: {
+                   type: 'shadow'
+               }
+           },
+           toolbox: {
+               show: true,
+               orient: 'vertical',
+               left: 'right',
+               top: 'center',
+               feature: {
+                   saveAsImage: {}
+               }
+           },
+           legend: {
+               data: ['2015年秋', '2016年春', '2016年秋'],
+               position: 'right'
+           },
+           grid: {
+               left: '3%',
+               right: '4%',
+               bottom: '3%',
+               containLabel: true
+           },
+           xAxis: {
+               type: 'value',
+               boundaryGap: [0, 0.01]
+           },
+           yAxis: {
+               type: 'category',
+               data: ['宾川县职业高级中学',
+                      '沧源县职业高级中学',
+                        '大理漾濞职业高级中学',
+                        '迪庆开放学院',
+                        '凤庆县职教中心',
+                        '耿马县职教中心',
+                        '临翔区职业教育中心',
+                        '双江职教中心教学点',
+                        '文山市职业高级中学教学点',
+                        '武定县委党校教学点',
+                        '砚山县委党校',
+                        '永德县职教中心',
+                        '云南开放大学继续教育学院（宾川）',
+                        '云县电大工作站',
+                        '沾益县职业教育培训中心',
+                        '镇康县职教中心',
+                        '中共马龙县委党校'
+                    ]
+           },
+           series: [
+            {
+                name: '2015年秋',
+                type: 'bar',
+                stack: '总量',
+                data: data2015a
+            },
+            {
+                name: '2016年春',
+                type: 'bar',
+                stack: '总量',
+                data: data2016s
+            },
+            {
+                name: '2016年秋',
+                type: 'bar',
+                stack: '总量',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'right',
+                        formatter: function (params) {
+                            return params.value + data2015a[params.dataIndex]+ data2016s[params.dataIndex]
+                        }
+                    }
+                },
+                data: data2016a
+            }
+        ]
+       };
+
+       // 为echarts对象加载数据 
+       myChart.setOption(option);
+          
+    </script>
+</body>
+
+</html>

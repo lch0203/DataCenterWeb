@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>办学规模</title>
+
+    <!-- Icons -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Main styles for this application -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+
+<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
+<header class="app-header navbar">
+    <button class="navbar-toggler mobile-sidebar-toggler hidden-lg-up" type="button">☰</button>
+    <a class="navbar-brand" href="#"></a>
+    <ul class="nav navbar-nav hidden-md-down">
+        <li class="nav-item">
+            <a class="nav-link navbar-toggler sidebar-toggler" href="#">☰</a>
+        </li>
+
+
+    </ul>
+    <ul class="nav navbar-nav ml-auto">
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button"
+               aria-haspopup="true" aria-expanded="false">
+                <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                <span class="hidden-md-down">欢迎,<strong><span th:text="${attributes.username}"></span></strong></span>
+            </a>
+        </li>
+
+    </ul>
+</header>
+
+<div class="app-body">
+    <div class="sidebar">
+        <nav class="sidebar-nav">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><i class="icon-pie-chart"></i> 首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/bxtx"><i class="icon-pie-chart"></i> 办学体系</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/bxgm"><i class="icon-pie-chart"></i> 办学规模</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cgb"><i class="icon-pie-chart"></i> 村干部学历提升</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/gbzx"><i class="icon-pie-chart"></i> 干部在线学习</a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+    <!-- Main content -->
+    <main class="main">
+
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><i class="icon-home">&#xe67f;</i><span class="c-gray en">&gt;</span> 办学规模</li>
+
+
+            <!-- Breadcrumb Menu-->
+            <li class="breadcrumb-menu hidden-md-down">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <a class="btn btn-secondary" href="#"><i class="icon-settings"></i> &nbsp;<!--设置--></a>
+                </div>
+            </li>
+        </ol>
+
+
+        <div class="container-fluid">
+            <div class="animated fadeIn">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fa fa-align-justify"></i> 2012年~2016年注册在校生规模
+                            </div>
+                            <!--内容填写-->
+                            <div class="card-block" id="container1" style="min-width:300px;height:300px">
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fa fa-align-justify"></i>2016年各类在校生占比
+                            </div>
+                            <!--内容填写-->
+                            <div class="card-block" id="container4" style="min-width:300px;height:300px">
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fa fa-align-justify"></i> 云南开放大学开放教育招生人数地区分布
+                            </div>
+                            <!--内容填写-->
+                            <div class="card-block" id="container2" style="min-width:400px;height:600px">
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fa fa-align-justify"></i>2012年~2016年开放教育招生人数
+                            </div>
+                            <div class="card-block" id="container5" style="min-width:400px;height:600px">
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fa fa-align-justify"></i>生源分布
+                            </div>
+                            <div class="card-block" id="container3" style="min-width:400px;height:600px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.conainer-fluid -->
+    </main>
+
+</div>
+
+<footer class="app-footer">
+        <span>
+        Copyright &copy; 2018.云南开放大学数据中心。
+        </span>
+</footer>
+<!-- Bootstrap and necessary plugins -->
+<script src="assets/js/libs/jquery.min.js"></script>
+<script src="assets/js/libs/tether.min.js"></script>
+<script src="assets/js/libs/bootstrap.min.js"></script>
+<script src="assets/js/libs/pace.min.js"></script>
+<!-- Plugins and scripts required by all views -->
+<script src="assets/js/libs/Chart.min.js"></script>
+
+
+<!-- GenesisUI main scripts -->
+
+<script src="js/app.js"></script>
+<script type="text/javascript" src="./echart3/dist/echarts.js"></script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('container3'));
+    var builderJson = {
+        "all": 165525,
+        "charts": {
+            "国家开放本科(专科起点)": 10362,
+            "国家开放专科": 18403,
+            "国家一村一名大学生专科": 8115,
+            "国家课程开放专科": 45,
+            "国家助力计划专科": 13
+        },
+        "components": {
+            "云开大远程开放本科": 265,
+            "云开大专本衔接本科": 1692,
+            "云开大远程开放专科": 4344,
+            "云开大中高衔接专科": 94993,
+            "云开大一村一项目专科": 4200,
+            "云开大校地合作项目专科": 6885,
+            "云开大滇西青年创业计划专科": 400,
+            "云开大成人本科": 558,
+            "云开大成人专科": 5335,
+            "国职院高职教育": 7897,
+            "国职院成人函授": 8,
+            "国职院中专(包括五年制中段)": 814,
+            "国职院五年制(高段)": 1196
+        }
+    };
+
+    var downloadJson = {
+        "国家一村一名大学生专科": 8115,
+        "国家课程开放专科": 45,
+        "国家助力计划专科": 13,
+        "国家开放专科": 18403,
+        "国家开放本科(专科起点)": 10362
+
+    };
+
+    var themeJson = {
+        "云开大校地合作项目专科": 6885,
+        "云开大远程开放本科": 265,
+        "云开大专本衔接本科": 1692,
+        "云开大远程开放专科": 4344,
+        "云开大一村一项目专科": 4200,
+        "云开大滇西青年创业计划专科": 400,
+        "云开大成人本科": 558,
+        "云开大成人专科": 5335,
+        "云开大中高衔接专科": 94993,
+        "国职院高职教育": 7897,
+        "国职院成人函授": 8,
+        "国职院中专(包括五年制中段)": 814,
+        "国职院五年制(高段)": 1196
+
+    };
+
+
+    var canvas = document.createElement('canvas');
+
+    option = {
+        backgroundColor: {
+            type: 'pattern',
+            image: canvas,
+            repeat: 'repeat'
+        },
+        tooltip: {},
+        title: [{
+            text: '各类教育在校人数',
+            subtext: '总计 ' + builderJson.all,
+            x: '25%',
+            textAlign: 'center'
+        }, {
+            text: '国家开放大学学生',
+            subtext: '总计 ' + Object.keys(downloadJson).reduce(function (all, key) {
+                return all + downloadJson[key];
+            }, 0),
+            x: '75%',
+            textAlign: 'center'
+        }, {
+            text: '云南开放大学学生',
+            subtext: '总计 ' + Object.keys(themeJson).reduce(function (all, key) {
+                return all + themeJson[key];
+            }, 0),
+            x: '75%',
+            y: '50%',
+            textAlign: 'center'
+        }],
+        grid: [{
+            top: 50,
+            width: '50%',
+            bottom: '45%',
+            left: 10,
+            containLabel: true
+        }, {
+            top: '55%',
+            width: '50%',
+            bottom: 0,
+            left: 10,
+            containLabel: true
+        }],
+        xAxis: [{
+            type: 'value',
+            max: builderJson.all,
+            splitLine: {
+                show: false
+            }
+        }, {
+            type: 'value',
+            max: builderJson.all,
+            gridIndex: 1,
+            splitLine: {
+                show: false
+            }
+        }],
+        yAxis: [{
+            type: 'category',
+            data: Object.keys(builderJson.charts),
+            axisLabel: {
+                interval: 0,
+                rotate: 30
+            },
+            splitLine: {
+                show: false
+            }
+        }, {
+            gridIndex: 1,
+            type: 'category',
+            data: Object.keys(builderJson.components),
+            axisLabel: {
+                interval: 0,
+                rotate: 30
+            },
+            splitLine: {
+                show: false
+            }
+        }],
+        series: [{
+            type: 'bar',
+            stack: 'chart',
+            z: 3,
+            label: {
+                normal: {
+                    position: 'right',
+                    show: true
+                }
+            },
+            data: Object.keys(builderJson.charts).map(function (key) {
+                return builderJson.charts[key];
+            })
+        }, {
+            type: 'bar',
+            stack: 'chart',
+            silent: true,
+            itemStyle: {
+                normal: {
+                    color: '#eee'
+                }
+            },
+            data: Object.keys(builderJson.charts).map(function (key) {
+                return builderJson.all - builderJson.charts[key];
+            })
+        }, {
+            type: 'bar',
+            stack: 'component',
+            xAxisIndex: 1,
+            yAxisIndex: 1,
+            z: 3,
+            label: {
+                normal: {
+                    position: 'right',
+                    show: true
+                }
+            },
+            data: Object.keys(builderJson.components).map(function (key) {
+                return builderJson.components[key];
+            })
+        }, {
+            type: 'bar',
+            stack: 'component',
+            silent: true,
+            xAxisIndex: 1,
+            yAxisIndex: 1,
+            itemStyle: {
+                normal: {
+                    color: '#eee'
+                }
+            },
+            data: Object.keys(builderJson.components).map(function (key) {
+                return builderJson.all - builderJson.components[key];
+            })
+        }, {
+            type: 'pie',
+            radius: [0, '30%'],
+            center: ['75%', '25%'],
+            roseType: 'area',
+            data: Object.keys(downloadJson).map(function (key) {
+                return {
+                    name: key.replace('.js', ''),
+                    value: downloadJson[key]
+                }
+            })
+        }, {
+            type: 'pie',
+            radius: [0, '30%'],
+            center: ['75%', '75%'],
+            roseType: 'area',
+            data: Object.keys(themeJson).map(function (key) {
+                return {
+                    name: key.replace('.js', ''),
+                    value: themeJson[key]
+                }
+            })
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+<script type="text/javascript" src="./echart3/map/js/province/yunnan.js"></script>
+<pre
+ name="code" class="html"></pre>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('container2'));
+    myChart.setOption({
+        title: {
+            text: '云南开放大学开放教育招生数地区分布',
+            subtext: '2012年~2016年招生人数分布',
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'item'
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ['2012年', '2013年', '2014年', '2015年', '2016年']
+        },
+        visualMap: {
+            min: 0,
+            max: 29000,
+            left: 'left',
+            top: 'bottom',
+            text: ['高', '低'],           // 文本，默认为数值文本
+            calculable: true,
+            inRange: {
+                color: ['lightskyblue', 'yellow', 'orangered']
+            }
+        },
+        toolbox: {
+            show: true,
+            orient: 'vertical',
+            left: 'right',
+            top: 'center',
+            feature: {
+                dataView: {readOnly: false},
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        series: [{
+            name: '2012年',
+            type: 'map',
+            map: '云南',
+            roam: true,
+            label: {
+                normal: {
+                    show: true
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data: [
+                {name: '昆明市', value: 1118},
+                {name: '曲靖市', value: 11398},
+                {name: '玉溪市', value: 15725},
+                {name: '保山市', value: 6189},
+                {name: '昭通市', value: 3752},
+                {name: '丽江市', value: 2743},
+                {name: '普洱市', value: 6886},
+                {name: '临沧市', value: 4915},
+                {name: '楚雄彝族自治州', value: 3335},
+                {name: '红河哈尼族彝族自治州', value: 3589},
+                {name: '文山壮族苗族自治州', value: 4918},
+                {name: '西双版纳傣族自治州', value: 1427},
+                {name: '大理白族自治州', value: 5857},
+                {name: '德宏傣族景颇族自治州', value: 6189},
+                {name: '怒江傈僳族自治州', value: 504},
+                {name: '迪庆藏族自治州', value: 1367}
+            ]
+        },
+            {
+                name: '2013年',
+                type: 'map',
+                map: '云南',
+                roam: true,
+                label: {
+                    normal: {
+                        show: true
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                data: [
+                    {name: '昆明市', value: 5081},
+                    {name: '曲靖市', value: 3451},
+                    {name: '玉溪市', value: 3011},
+                    {name: '保山市', value: 946},
+                    {name: '昭通市', value: 637},
+                    {name: '丽江市', value: 389},
+                    {name: '普洱市', value: 1260},
+                    {name: '临沧市', value: 877},
+                    {name: '楚雄彝族自治州', value: 180},
+                    {name: '红河哈尼族彝族自治州', value: 524},
+                    {name: '文山壮族苗族自治州', value: 113},
+                    {name: '西双版纳傣族自治州', value: 358},
+                    {name: '大理白族自治州', value: 1099},
+                    {name: '德宏傣族景颇族自治州', value: 671},
+                    {name: '怒江傈僳族自治州', value: 99},
+                    {name: '迪庆藏族自治州', value: 222}
+                ]
+            },
+            {
+                name: '2014年',
+                type: 'map',
+                map: '云南',
+                roam: true,
+                label: {
+                    normal: {
+                        show: true
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                data: [
+                    {name: '昆明市', value: 5659},
+                    {name: '曲靖市', value: 2945},
+                    {name: '玉溪市', value: 1981},
+                    {name: '保山市', value: 926},
+                    {name: '昭通市', value: 579},
+                    {name: '丽江市', value: 620},
+                    {name: '普洱市', value: 1604},
+                    {name: '临沧市', value: 470},
+                    {name: '楚雄彝族自治州', value: 472},
+                    {name: '红河哈尼族彝族自治州', value: 747},
+                    {name: '文山壮族苗族自治州', value: 520},
+                    {name: '西双版纳傣族自治州', value: 290},
+                    {name: '大理白族自治州', value: 980},
+                    {name: '德宏傣族景颇族自治州', value: 727},
+                    {name: '怒江傈僳族自治州', value: 26},
+                    {name: '迪庆藏族自治州', value: 251}
+                ]
+            },
+            {
+                name: '2015年',
+                type: 'map',
+                map: '云南',
+                roam: true,
+                label: {
+                    normal: {
+                        show: true
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                data: [
+                    {name: '昆明市', value: 6569},
+                    {name: '曲靖市', value: 1958},
+                    {name: '玉溪市', value: 2559},
+                    {name: '保山市', value: 1074},
+                    {name: '昭通市', value: 482},
+                    {name: '丽江市', value: 419},
+                    {name: '普洱市', value: 1906},
+                    {name: '临沧市', value: 997},
+                    {name: '楚雄彝族自治州', value: 211},
+                    {name: '红河哈尼族彝族自治州', value: 762},
+                    {name: '文山壮族苗族自治州', value: 1608},
+                    {name: '西双版纳傣族自治州', value: 391},
+                    {name: '大理白族自治州', value: 1396},
+                    {name: '德宏傣族景颇族自治州', value: 554},
+                    {name: '怒江傈僳族自治州', value: 16},
+                    {name: '迪庆藏族自治州', value: 205}
+                ]
+            },
+            {
+                name: '2016年',
+                type: 'map',
+                map: '云南',
+                roam: true,
+                label: {
+                    normal: {
+                        show: true
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                data: [
+                    {name: '昆明市', value: 9861},
+                    {name: '曲靖市', value: 8978},
+                    {name: '玉溪市', value: 3279},
+                    {name: '保山市', value: 2081},
+                    {name: '昭通市', value: 1629},
+                    {name: '丽江市', value: 573},
+                    {name: '普洱市', value: 2082},
+                    {name: '临沧市', value: 2285},
+                    {name: '楚雄彝族自治州', value: 2027},
+                    {name: '红河哈尼族彝族自治州', value: 1525},
+                    {name: '文山壮族苗族自治州', value: 2552},
+                    {name: '西双版纳傣族自治州', value: 317},
+                    {name: '大理白族自治州', value: 1748},
+                    {name: '德宏傣族景颇族自治州', value: 899},
+                    {name: '怒江傈僳族自治州', value: 187},
+                    {name: '迪庆藏族自治州', value: 468}
+                ]
+            }]
+    });
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('container4'));
+
+    var option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                dataView: {show: true, readOnly: false},
+                restore: {show: true},
+                saveAsImage: {show: true}
+            }
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            top: 'bottom',
+            data: ["开放教育", "高职教育", "成人教育（含五年制大专）"]
+        },
+        title: {
+            text: '云南开放大学各类教育在校生人数',
+            subtext: '学生分布',
+            left: 'center'
+        },
+        series: [
+            {
+                "name": "在校生人数",
+                type: 'pie',
+                radius: '55%',
+                center: ['50%', '60%'],
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top'
+                    }
+                },
+                data: [{name: '开放教育', value: 154408},
+                    {name: '高职教育', value: 7927},
+                    {name: '成人教育（含五年制大专）', value: 9079}
+                ]
+
+            }]
+    };
+
+    // 为echarts对象加载数据
+    myChart.setOption(option);
+
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('container1'));
+    option = {
+        title: {
+            text: '2012年~2016年各类在校学生规模',
+            subtext: '数据为注册在校学生数'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: ['开放教育', '高职教育', '成人教育（含五年制大专）'],
+            top: 'bottom'
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                dataView: {show: true, readOnly: false},
+                magicType: {show: true, type: ['line', 'bar']},
+                restore: {show: true},
+                saveAsImage: {show: true}
+            }
+        },
+        calculable: true,
+        xAxis: [
+            {
+                type: 'category',
+                data: ['2012年', '2013年', '2014年', '2015年', '2016年']
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                name: '开放教育',
+                type: 'bar',
+                data: [75517, 93434, 107774, 125277, 154400],
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: 'top',
+                            formatter: '{c}'
+                        }
+                    }
+                }
+            }, {
+                name: '高职教育',
+                type: 'bar',
+                data: [7709, 7550, 7226, 7574, 7927],
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: 'top',
+                            formatter: '{c}'
+                        }
+                    }
+                }
+            },
+            {
+                name: '成人教育（含五年制大专）',
+                type: 'bar',
+                data: [6146, 7696, 8298, 9265, 9079],
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: 'top',
+                            formatter: '{c}'
+                        }
+                    }
+                }
+            }
+
+        ]
+    };
+    myChart.setOption(option);
+</script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('container5'));
+
+    var option = {
+        tooltip: {
+            show: true
+        },
+        legend: {
+            data: ['2012年~2016年开放教育招生规模']
+        },
+        title: {
+            text: '2012年~2016年开放教育招生规模',
+            subtext: '实际招生数',
+            left: 'center'
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: ["2012年", "2013年", "2014年", "2015年", "2016年"]
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                "name": "在校生人数",
+                "type": "bar",
+                itemStyle: {
+                    normal: {
+                        //
+                        color: function (params) {
+                            // build a color map as your need.
+                            var colorList = ['#FA8072'];
+                            return colorList[params.dataIndex]
+                        },
+                        //以下为是否显示，显示位置和显示格式的设置了
+                        label: {
+                            show: true,
+                            position: 'top',
+                            //                             formatter: '{c}'
+                            formatter: '{c}'
+                        }
+                    }
+                },
+                data: [22066, 18954, 18797, 21107, 40491]
+            }
+        ]
+    };
+
+    // 为echarts对象加载数据
+    myChart.setOption(option);
+
+</script>
+</body>
+
+</html>

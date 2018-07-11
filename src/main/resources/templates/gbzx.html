@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>干部在线学习</title>
+
+    <!-- Icons -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Main styles for this application -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+
+
+<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
+    <header class="app-header navbar">
+        <button class="navbar-toggler mobile-sidebar-toggler hidden-lg-up" type="button">☰</button>
+        <a class="navbar-brand" href="#"></a>
+        <ul class="nav navbar-nav hidden-md-down">
+            <li class="nav-item">
+                <a class="nav-link navbar-toggler sidebar-toggler" href="#">☰</a>
+            </li>
+
+
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                    <span class="hidden-md-down">欢迎,<strong><span th:text="${attributes.username}"></span></strong></span>
+                </a>
+            </li>
+
+        </ul>
+    </header>
+
+    <div class="app-body">
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="icon-pie-chart"></i> 首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/bxtx"><i class="icon-pie-chart"></i> 办学体系</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/bxgm"><i class="icon-pie-chart"></i> 办学规模</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cgb"><i class="icon-pie-chart"></i> 村干部学历提升</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/gbzx"><i class="icon-pie-chart"></i> 干部在线学习</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main content -->
+        <main class="main">
+
+            <!-- Breadcrumb -->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><i class="icon-home">&#xe67f;</i><span class="c-gray en">&gt;</span> 干部在线学习</li>
+            
+
+                <!-- Breadcrumb Menu-->
+                <li class="breadcrumb-menu hidden-md-down">
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <a class="btn btn-secondary" href="#"><i class="icon-settings"></i> &nbsp;<!--设置--></a>
+                    </div>
+                </li>
+            </ol>
+
+
+            <div class="container-fluid">
+                <div class="animated fadeIn">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <i class="fa fa-align-justify"></i> 州市学员分布
+                                </div>
+                                <!--内容填写-->
+                                <div class="card-block" id="container1" style="min-width:400px;height:600px">
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.col-->
+
+                        <div class="col-lg-6" >
+                            <div class="card">
+                                <div class="card-header">
+                                    <i class="fa fa-align-justify"></i> 学员构成
+                                </div>
+                                <!--内容填写-->
+                                <div class="card-block" id="container2" style="min-width:400px;height:600px">
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.col-->
+                    </div>
+
+                </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fa fa-align-justify"></i> 云南省干部在线学习学院10年发展
+                        </div>
+                        <div class="card-block" id="container3" style="min-width:400px;height:600px">
+
+                        </div>
+                    </div>
+                </div>
+                <!--/.col-->
+            </div>
+            </div>
+
+            <!-- /.conainer-fluid -->
+        </main>
+
+    </div>
+
+     <footer class="app-footer">
+        <span >
+        Copyright &copy; 2018.云南开放大学数据中心。
+        </span>
+    </footer>
+    <!-- Bootstrap and necessary plugins -->
+	<script src="assets/js/libs/jquery.min.js"></script>
+	<script src="assets/js/libs/tether.min.js"></script>
+	<script src="assets/js/libs/bootstrap.min.js"></script>
+	<script src="assets/js/libs/pace.min.js"></script>
+	<!-- Plugins and scripts required by all views -->
+	<script src="assets/js/libs/Chart.min.js"></script>
+
+
+    <!-- GenesisUI main scripts -->
+
+    <script src="js/app.js"></script>
+<script type="text/javascript" src="./echart3/dist/echarts.js"></script>
+<script type="text/javascript" src="./echart3/map/js/province/yunnan.js"></script>
+        <pre name ="code" class="html"></pre>
+  <script type="text/javascript">
+
+      var myChart = echarts.init(document.getElementById('container1'));
+      myChart.setOption({
+                title: {
+                    text: '干部在线州市学员分布',
+                    subtext: '数据来源于干部在线学院2017年4月27日',
+                    left: 'center'
+                },
+                tooltip: {
+                    trigger: 'item'
+                },
+
+                visualMap: {
+                    min: 1500,
+                    max: 15000,
+                    left: 'left',
+                    top: 'bottom',
+                    text: ['高', '低'],           // 文本，默认为数值文本
+                    calculable: true
+                },
+                toolbox: {
+                    show: true,
+                    orient: 'vertical',
+                    left: 'right',
+                    top: 'center',
+                    feature: {
+                        restore: {},
+                        saveAsImage: {}
+                    }
+                },
+                series: [{
+                    name: '州市学员',
+                    type: 'map',
+                    map: '云南',
+                    roam: false,
+                    label: {
+                        normal: {
+                            show: true
+                        },
+                        emphasis: {
+                            show: true
+                        }
+                    },
+                    roam:true,
+                    data: [
+                    { name: '昆明市', value: 13633 },
+                    { name: '曲靖市', value: 7925 },
+                    { name: '玉溪市', value: 6131 },
+                    { name: '保山市', value: 5718 },
+                    { name: '昭通市', value: 8699 },
+                    { name: '丽江市', value: 4450 },
+                    { name: '普洱市', value: 3964 },
+                    { name: '临沧市', value: 14750 },
+                    { name: '楚雄彝族自治州', value: 13423 },
+                    { name: '红河哈尼族彝族自治州', value: 6756 },
+                    { name: '文山壮族苗族自治州', value: 11095 },
+                    { name: '西双版纳傣族自治州', value: 2847 },
+                    { name: '大理白族自治州', value: 11309 },
+                    { name: '德宏傣族景颇族自治州', value: 4238 },
+                    { name: '怒江傈僳族自治州', value: 3011 },
+                    { name: '迪庆藏族自治州', value: 1841 }
+                ]
+                }]
+            });
+        </script>
+        <script type="text/javascript">
+            var myChart = echarts.init(document.getElementById('container2'));
+            option = {
+                title: {
+                    text: "干部在线学员构成",
+                    subtext: "学员分布与职级结构",
+                    left: "center"
+                },
+                backgroundColor: new echarts.graphic.RadialGradient(0.3, 0.3, 0.8, [{
+                    offset: 0,
+                    color: '#f7f8fa'
+                }, {
+                    offset: 1,
+                    color: '#cdd0d5'
+                }]),
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b}:({d}%)"
+                },
+                toolbox: {
+                    show: true,
+                    orient: 'vertical',
+                    left: 'right',
+                    top: 'center',
+                    feature: {
+                            saveAsImage: {}
+                    }
+                },
+                series: [{
+                    name: '职级结构',
+                    type: 'pie',
+                    selectedMode: 'single',
+                    radius: [0, '25%'],
+                    label: {
+                        normal: {
+                            position: 'outer'
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            show: true
+                        }
+                    },
+                    data: [{
+                        'name': '厅级干部',
+                        'value': 1823
+                    }, {
+                        'name': '处级',
+                        'value': 28165
+                    }, {
+                        'name': '科级及其它',
+                        'value': 120000
+                    }]
+                }, {
+                    name: '学员来源',
+                    type: 'pie',
+                    radius: ['50%', '65%'],
+
+                    data: [{
+                        'name': '省委各部委',
+                        'value': 1076
+                    }, {
+                        'name': '省级国家机关',
+                        'value': 10602
+                    }, {
+                        'name': '省人民团体',
+                        'value': 608
+                    }, {
+                        'name': '省属大专院校',
+                        'value': 4011
+                    }, {
+                        'name': '省属企事业单位',
+                        'value': 4626
+                    }, {
+                        'name': '昆明市',
+                        'value': 13633
+                    }, {
+                        'name': '曲靖市',
+                        'value': 7925
+                    }, {
+                        'name': '玉溪市',
+                        'value': 6131
+                    }, {
+                        'name': '保山市',
+                        'value': 5718
+                    }, {
+                        'name': '昭通市',
+                        'value': 8699
+                    }, {
+                        'name': '丽江市',
+                        'value': 4450
+                    }, {
+                        'name': '普洱市',
+                        'value': 3964
+                    }, {
+                        'name': '临沧市',
+                        'value': 14750
+                    }, {
+                        'name': '楚雄州',
+                        'value': 13423
+                    }, {
+                        'name': '红河州',
+                        'value': 6756
+                    }, {
+                        'name': '文山州',
+                        'value': 11095
+                    }, {
+                        'name': '西双版纳',
+                        'value': 2847
+                    }, {
+                        'name': '大理州',
+                        'value': 11309
+                    }, {
+                        'name': '德宏州',
+                        'value': 4238
+                    }, {
+                        'name': '怒江州',
+                        'value': 3011
+                    }, {
+                        'name': '迪庆州',
+                        'value': 1841
+                    }]
+                }]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+        <script type="text/javascript">
+            var myChart = echarts.init(document.getElementById('container3'));
+            option = {
+                title: [{
+                    text: '参学人数',
+                    x: '35%',
+                    textAlign: 'center'
+                }, {
+                    text: '参学率(%)',
+                    x: '80%',
+                    textAlign: 'center'
+                }, {
+                    text: '通过率(%)',
+                    x: '80%',
+                    y: '50%',
+                    textAlign: 'center'
+                }],
+                legend: {
+                    data: ['参学人数(人)', '参学率(%)', '通过率(%)'],
+                    top: 'bottom'
+                },
+
+                tooltip: {
+                    trigger: 'axis'
+                },
+                grid: [{
+                    top: 50,
+                    width: '65%',
+                    left: 10,
+                    containLabel: true
+                }, {
+                    top: 50,
+                    width: '25%',
+                    bottom: '55%',
+                    left: '70%',
+                    containLabel: true
+                }, {
+                    top: '55%',
+                    width: '25%',
+                    left: '70%',
+                    containLabel: true
+                }],
+                toolbox: {
+                    show: true,
+                    feature: {
+                        dataView: { show: true, readOnly: false },
+                        magicType: { show: true, type: ['line', 'bar'] },
+                        restore: { show: true },
+                        saveAsImage: { show: true }
+                    }
+                },
+                calculable: true,
+                xAxis: [
+                    {
+                        type: 'category',
+                        gridIndex: 0,
+                        data: ['2007年', '2008年', '2009年', '2010年', '2011年', '2012年', '2013年', '2014年', '2015年', '2016年']
+                    },
+                    {
+                        type: 'category',
+                        gridIndex: 1,
+                        data: ['2014年', '2015年', '2016年']
+                    },
+                    {
+                        type: 'category',
+                        gridIndex: 2,
+                        data: ['2014年', '2015年', '2016年']
+                    }
+                ],
+                yAxis: [
+                {
+                    type: 'value',
+                    name: '参学人数(人)',
+                    min: 0,
+                    max: 145000,
+                    gridIndex: 0,
+                    position: 'left',
+                    axisLabel: {
+                        formatter: '{value} '
+                    }
+                },
+                {
+                    type: 'value',
+                    name: '参学率(%)',
+                    min: 0,
+                    max: 100,
+                    gridIndex: 1,
+                    position: 'right',
+                    axisLabel: {
+                        formatter: '{value}% '
+                    }
+                },
+                {
+                    type: 'value',
+                    name: '通过率(%)',
+                    min: 0,
+                    max: 100,
+                    gridIndex: 2,
+                    position: 'right',
+                    axisLabel: {
+                        formatter: '{value}% '
+                    }
+                }
+            ],
+                series: [
+                    {
+                        name: '参学人数(人)',
+                        type: 'bar',
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    position: 'top',
+                                    formatter: '{c}'
+                                }
+                            }
+                        },
+                        data: [500, , 4000, 16000, 80000, 90000, 96000, 120000, 130000, 142000]
+                    },
+                    {
+                        name: '参学率(%)',
+                        type: 'bar',
+                        xAxisIndex: 1,
+                        yAxisIndex: 1,
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    position: 'top',
+                                    formatter: '{c}%'
+                                }
+                            }
+                        },
+                        data: [89, 89, 92]
+                    },
+                    {
+                        name: '通过率(%)',
+                        type: 'bar',
+                        xAxisIndex: 2,
+                        yAxisIndex: 2,
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true,
+                                    position: 'top',
+                                    formatter: '{c}%'
+                                }
+                            }
+                        },
+                        data: [81, 85, 90]
+                    }
+                ]
+            };
+            myChart.setOption(option);           
+    </script>
+
+</body>
+
+</html>
